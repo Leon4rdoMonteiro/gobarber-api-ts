@@ -10,6 +10,8 @@ import '@shared/infra/typeorm/database';
 
 import routes from '@shared/infra/http/routes';
 
+import '@shared/container';
+
 const app = express();
 
 app.use(express.json());
