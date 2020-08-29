@@ -4,3 +4,7 @@ node_modules/
 build/
 tmp/uploads/*
 !tmp/uploads/.gitkeep
+coverage
+
+package-lock.json
+yarn.lock
