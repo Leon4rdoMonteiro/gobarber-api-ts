@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import * as uuid from 'uuid';
 import { isEqual } from 'date-fns';
 
 import IAppointmentsRepository from '@modules/appointments/repositories/IAppointmentsRepository';
@@ -22,7 +22,7 @@ class FakeAppointmentsRepository implements IAppointmentsRepository {
     }: ICreateAppointmentDTO): Promise<Appointment> {
         const appointment = new Appointment();
 
-        Object.assign(appointment, { id: uuid(), date, provider_id });
+        Object.assign(appointment, { id: uuid.v4(), date, provider_id });
 
         this.appointments.push(appointment);
 
